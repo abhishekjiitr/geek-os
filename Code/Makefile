@@ -9,3 +9,4 @@ boot.bin: boot.asm
 
 clean:
 	\rm *.bin *.flp
+	
