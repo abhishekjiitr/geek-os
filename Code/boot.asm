@@ -2,11 +2,11 @@
 [org 0x7c00]
 mov ah, 0x0e ; set scrolling teletype BIOS routine
 
-mov bx, HELLO_MSG
-call print_string
+mov dx, 0x1000
+call print_hex
 
 %include "print_string.asm"
-
+%include "print_hex.asm"
 jmp $
 
 
