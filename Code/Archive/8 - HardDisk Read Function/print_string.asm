@@ -12,6 +12,10 @@ print_string:
 		int 0x10 ; give interrupt to print on screen
 		jmp print
 	end:
+		mov al, 13 	 	
+		int 0x10
+		mov al, 10
+		int 0x10
 		popa
 		ret
 fix:
