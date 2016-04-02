@@ -1,5 +1,4 @@
 [bits 32]
-jmp fix5
 VIDEO_MEMORY equ 0xb8000
 WHITE_ON_BLACK equ 0x0f
 
@@ -24,4 +23,3 @@ print_strin_pm_loop:
 print_string_pm_done:
 	popa 
 	ret
-fix5:

@@ -13,10 +13,11 @@ call print_string
 
 call switch_to_pm
 
+jmp $	
 
-%include "print/print_string.asm"
+%include "print_string.asm"
 %include "gdt.asm"
-%include "print/print_string_pm.asm"
+%include "print_string_pm.asm"
 %include "switch_to_pm.asm"
 
 [bits 32]
