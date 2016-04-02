@@ -1,6 +1,7 @@
 all: boot.flp
 	qemu-system-i386 -fda floppy.flp
 	make clean
+	
 boot.flp: boot.bin
 	dd status=noxfer conv=notrunc if=boot.bin of=floppy.flp
 
