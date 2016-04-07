@@ -1,13 +1,17 @@
 all: os-image
-	qemu-system-i386 os-image
-	rm *.bin *.o os-image
-os-image: kernel boot
+	qemu-system-i386 os-image 
+	make clean
+
+os-image: boot_sect.bin kernel.bin
 	cat boot_sect.bin kernel.bin > os-image
 	
-kernel: kernel.c entry.asm
-	nasm entry.asm -f elf64 -o entry.o
-	gcc -ffreestanding -c kernel.c -o kernel.o
+kernel.bin: kernel/kernel.c kernel/entry.asm
+	nasm kernel/entry.asm -f elf64 -o entry.o
+	gcc -ffreestanding -c kernel/kernel.c -o kernel.o
 	ld -o kernel.bin -Ttext 0x1000 entry.o kernel.o --oformat binary
 
-boot: boot.asm
-	nasm boot.asm -o boot_sect.bin
+boot_sect.bin: boot/boot.asm
+	nasm boot/boot.asm -o boot_sect.bin
+
+clean:
+	rm *.bin *.o os-image

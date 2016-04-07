@@ -17,11 +17,11 @@ KERNEL_OFFSET equ 0x1000
 
     jmp $ ; jump to this line over and over
 
-%include "print/print_string.asm"
-%include "disk_load.asm"
-%include "gdt.asm"
-%include "print/print_string_pm.asm"
-%include "switch_to_pm.asm"
+%include "boot/print_string.asm"
+%include "boot/disk_load.asm"
+%include "boot/gdt.asm"
+%include "boot/print_string_pm.asm"
+%include "boot/switch_to_pm.asm"
 
 [bits 16]
 load_kernel:
@@ -47,7 +47,7 @@ BEGIN_PM:
     jmp $ ; jump to this line over and over
 
 BOOT_DRIVE db 0
-MSG_REAL_MODE db "Hello, I'm a bootloader.", 0
+MSG_REAL_MODE db "Hello, I am a bootloader.", 0
 MSG_LOAD_KERNEL db "Loading kernel now...", 0
 MSG_PROT_MODE db "Made it to protected mode. lalalalala", 0
 
