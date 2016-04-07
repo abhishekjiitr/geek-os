@@ -1,4 +1,3 @@
-jmp fix ; fixes a goddamn bloody error that only god knows solution to ;(
 print_string:
 	pusha
 	mov si, bx
@@ -18,4 +17,3 @@ print_string:
 		int 0x10
 		popa
 		ret
-fix:
