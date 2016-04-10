@@ -52,13 +52,12 @@ void colorize()
 			{
 				for ( int c = 0 ; c < 80 ; c++ )
 					{
-						if ( counter == 0 )
-							counter++;
 						printColor(r, c, (counter % 14)+1 );
 						counter++;
 					}
 			}
 	}
+
 void delay(int x)
 	{
 		for ( int i = 0 ; i < x ; i++ )
