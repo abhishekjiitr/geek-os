@@ -1,13 +1,17 @@
-void test();
+//#include "chaiChing.h"
+#include "../drivers/screen.h"
+#include "../drivers/screen.c"
+
 void main()
 	{
-		char* video_memory = (char*) 0xb8000;
-		// *video_memory = 'X';
-		for ( int i = 0 ; i < 80 ; i++ )
-			{
-				*(video_memory) = '2';
-				*(video_memory+2) = 1;
-				video_memory += 2;
-			}
-		 // test();
+		//delay(20000);
+
+		clear();
+		colorize();
+		//printStr(0, 0, "khaliiinaa");
+
+		char* geek = "geek-os";
+		printStr(4, 35, "GEEK - OS");
+		printStr(7, 19, "Our attempt to build a small OS on our own :)");
+		
 	}
