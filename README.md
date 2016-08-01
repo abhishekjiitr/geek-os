@@ -4,7 +4,7 @@ geek-os
 
 Screenshots
 -----------
-![](images/screenshot1.jpg)
+![](images/screenshot1.png)
 Usage
 -----
 First write assembly code in boot.asm. Make sure you are in the Code folder.
