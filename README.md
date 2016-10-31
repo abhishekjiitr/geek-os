@@ -23,5 +23,3 @@ Mentor
 Dr. Vaskar Raychoudhary
 
 Prof. at Department of Computer Science
-
-IIT Roorkee
