@@ -1,6 +1,6 @@
 geek-os
 ==========
->  A bootloader in C and Assembly Programming Language.
+>  A bootloader in Assembly Language and kernel in C.
 
 Screenshots
 -----------
