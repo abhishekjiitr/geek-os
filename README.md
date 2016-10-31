@@ -19,5 +19,3 @@ Requirements
 + gcc
 
 Mentor
-------
-Dr. Vaskar Raychoudhary
