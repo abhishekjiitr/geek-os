@@ -1,3 +1,5 @@
+#This is makefile that automates everything.
+
 all: os-image
 	qemu-system-i386 os-image 
 	make clean
