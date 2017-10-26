@@ -17,3 +17,4 @@ Requirements
 + nasm
 + qemu
 + gcc
++ gnutools
